@@ -1,11 +1,20 @@
 # Customer_churn
+This repository is written to give a step by step guidance on how customer churn model is created.
 High churn rate is a good indicating that something isn't right with services rendered to customers, as they are able to better services elsewhere. This is a fundamental flaw in ways a business should operate
-This repository is written to give a step by step guidance on how customer churn model is created, It contains
+
+This Readme file provides an overview of the project, instructionfor running the model and few additional information
 ## Table of Contents
 - [Project Overview](#project-overview)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Dataset](#dataset)
+- [EDA](#eda)![s plot](https://github.com/adeleyestella/Customer_churn/assets/132029424/a14514a8-097d-449e-87d7-e75d7b47d251)
+![contra churn total](https://github.com/adeleyestella/Customer_churn/assets/132029424/47e0483a-b70f-48e5-9ce9-fdc1b2cb047b)
+![m charges](https://github.com/adeleyestella/Customer_churn/assets/132029424/8d417b32-5297-4f87-989f-07069f415a2b)
+![table 1](https://github.com/adeleyestella/Customer_churn/assets/132029424/835d355d-6f51-416d-8099-7c65b7d7435a)
+![correlatn](https://github.com/adeleyestella/Customer_churn/assets/132029424/12618b2e-a6bb-483c-9206-52c4d8b1f9e6)
+![churn uni pie](https://github.com/adeleyestella/Customer_churn/assets/132029424/86acb8d8-fe57-47e1-8277-8028d1f01930)
+
 - [Model Training](#model-training)
 - [Evaluation](#evaluation)
 - [Contributing](#contributing)
@@ -42,10 +51,67 @@ The both long command-lines have a same structure, they pipe multiple commands u
 
 NB: For MacOs users, please install Xcode if you have an issue.
 
+## Usage
+a. Prepare your input data in a compatible format. Refer to the [Dataset](#dataset) section for more information on the input format.
+b. Run the prediction script using the following command:
+
+   python predict.py --input <path_to_input_data>
+
+   Replace `<path_to_input_data>` with the actual path to your input data file.
+c. The model will process the input data and generate Customer Churn predictions. The results will be displayed on the console.
+
+## Dataset
+The Customer Churn Prediction Model is trained on a dataset containing historical data of vehicles and their corresponding CO2 emissions. The dataset includes the following features:
+
+- Vehicle make
+- Vehicle model
+- Vehicle type (e.g., car, truck, SUV)
+- Fuel type (e.g., petrol, diesel)
+- Engine size (in liters)
+
+Each data point in the dataset consists of these features along with the churn value. The dataset is split into training and testing sets for model evaluation.
+
+## Exploratory Data Analysis (EDA)📊 
+Before building the churn prediction model, we performed exploratory data analysis (EDA) to gain insights into the dataset and understand the relationships between variables.
+
+Some of the key EDA steps performed in this project include:
+
+a.*Descriptive Statistics*
+To gain a better understanding of the dataset, computed descriptive statistics was computed for the numerical variables. These statistics include measures such as mean, median, standard deviation, minimum, maximum, and quartiles for numerical variables. Also descriptive stastistics was also done categorical variables
+
+b.*Data Visualization*
+Data visualization plays a crucial role in EDA, allowing us to uncover patterns, trends, and relationships in the data. various visualizations created to uncover the patters and trends of the data, including:
+
+Bar plots and pie charts: To understand the distribution of numerical and categorical variables, respectively.
+
+![churn_distribution]("C:\Users\USER\Pictures\churn uni pie.png")
+![Contract per total chareges]("C:\Users\USER\Pictures\contra churn total.png")
+
+Box plots: To identify outliers and examine the distribution of numerical variables across different categories.
+![Monthly charges]("C:\Users\USER\Pictures\m charges.png")
+
+Scatter plots: To explore relationships and correlations between pairs of variables.
+
+![scatter_plot]("C:\Users\USER\Pictures\s plot.png")
+
+Heatmaps and correlation matrices: To visualize the correlation between variables and identify potential multicollinearity.
+
+![heatmap]("C:\Users\USER\Pictures\correlatn.png")
+
+Please refer to the provided EDA notebook in the **notebooks**  folder for detailed implementation and visualizations related to the EDA process.
+
+*Data Cleaning and Preprocessing*
+Before diving into the analysis,  data cleaning was conductedand preprocessing steps to ensure the dataset's quality and prepare it for analysis. This process involved:
+
+Handling missing values: missing values in the dataset was identified and was filled with mean value of the column. 
+
+Handling duplicates: checked for aduplicated records to avoid redundancy and ensure data integrity but there was no duplicate value.
+
+Data transformation: performed necessary transformations on the data, such as converting data types, scaling numerical features, encoding categorical variables, and creating derived features.
+
 ## Modeling
 In this project, multiple classification models are implemented and trained using the preprocessed telecom churn dataset. The models include:
 (Logistic Regression,Random Forest, XGB Classifier,K-Nearest Neighbors, SGD Classifier,'SVC', Naive Bayes, Decision tree,
- 
  
 Please refer to the provided capstone model notebook in the **notebooks**  folder for detailed implementation of the modeling process.
 
