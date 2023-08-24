@@ -8,16 +8,10 @@ This Readme file provides an overview of the project, instructionfor running the
 - [Installation](#installation)
 - [Usage](#usage)
 - [Dataset](#dataset)
-- [EDA](#eda)![s plot](https://github.com/adeleyestella/Customer_churn/assets/132029424/a14514a8-097d-449e-87d7-e75d7b47d251)
-![contra churn total](https://github.com/adeleyestella/Customer_churn/assets/132029424/47e0483a-b70f-48e5-9ce9-fdc1b2cb047b)
-![m charges](https://github.com/adeleyestella/Customer_churn/assets/132029424/8d417b32-5297-4f87-989f-07069f415a2b)
-![table 1](https://github.com/adeleyestella/Customer_churn/assets/132029424/835d355d-6f51-416d-8099-7c65b7d7435a)
-![correlatn](https://github.com/adeleyestella/Customer_churn/assets/132029424/12618b2e-a6bb-483c-9206-52c4d8b1f9e6)
-![churn uni pie](https://github.com/adeleyestella/Customer_churn/assets/132029424/86acb8d8-fe57-47e1-8277-8028d1f01930)
-
+- [EDA](#eda)
 - [Model Training](#model-training)
 - [Evaluation](#evaluation)
-- [Contributing](#contributing)
+- [Contributions](#contributing)
 
 ## Project Overview
 The objective of this project is to build a supervised machine learning model that can predict Customer Churn based on certain features such as Tenure, type of contrat signed by customers, payment method, Total Charges, Phone/Internet Service. The model is trained on a labeled dataset and uses Classification /regression techniques to make predictions.
@@ -71,45 +65,47 @@ The Customer Churn Prediction Model is trained on a dataset containing historica
 
 Each data point in the dataset consists of these features along with the churn value. The dataset is split into training and testing sets for model evaluation.
 
-## Exploratory Data Analysis (EDA)📊 
+## (EDA) Exploratory Data Analysis 📊 
 Before building the churn prediction model, we performed exploratory data analysis (EDA) to gain insights into the dataset and understand the relationships between variables.
 
 Some of the key EDA steps performed in this project include:
 
-a.*Descriptive Statistics*
+a.**Descriptive Statistics**
 To gain a better understanding of the dataset, computed descriptive statistics was computed for the numerical variables. These statistics include measures such as mean, median, standard deviation, minimum, maximum, and quartiles for numerical variables. Also descriptive stastistics was also done categorical variables
 
-b.*Data Visualization*
+b.**Data Visualization**
 Data visualization plays a crucial role in EDA, allowing us to uncover patterns, trends, and relationships in the data. various visualizations created to uncover the patters and trends of the data, including:
 
 Bar plots and pie charts: To understand the distribution of numerical and categorical variables, respectively.
 
-![churn_distribution]("C:\Users\USER\Pictures\churn uni pie.png")
-![Contract per total chareges]("C:\Users\USER\Pictures\contra churn total.png")
+![churn uni pie](https://github.com/adeleyestella/Customer_churn/assets/132029424/86acb8d8-fe57-47e1-8277-8028d1f01930)
+
+![contra churn total](https://github.com/adeleyestella/Customer_churn/assets/132029424/47e0483a-b70f-48e5-9ce9-fdc1b2cb047b)
 
 Box plots: To identify outliers and examine the distribution of numerical variables across different categories.
-![Monthly charges]("C:\Users\USER\Pictures\m charges.png")
+![m charges](https://github.com/adeleyestella/Customer_churn/assets/132029424/8d417b32-5297-4f87-989f-07069f415a2b)
 
 Scatter plots: To explore relationships and correlations between pairs of variables.
 
-![scatter_plot]("C:\Users\USER\Pictures\s plot.png")
+![s plot](https://github.com/adeleyestella/Customer_churn/assets/132029424/a14514a8-097d-449e-87d7-e75d7b47d251))
 
 Heatmaps and correlation matrices: To visualize the correlation between variables and identify potential multicollinearity.
+![correlatn](https://github.com/adeleyestella/Customer_churn/assets/132029424/12618b2e-a6bb-483c-9206-52c4d8b1f9e6)
 
-![heatmap]("C:\Users\USER\Pictures\correlatn.png")
+
+
 
 Please refer to the provided EDA notebook in the **notebooks**  folder for detailed implementation and visualizations related to the EDA process.
 
-*Data Cleaning and Preprocessing*
-Before diving into the analysis,  data cleaning was conductedand preprocessing steps to ensure the dataset's quality and prepare it for analysis. This process involved:
+c. **Data Cleaning and Preprocessing**: Before diving into the analysis,  data cleaning was conductedand preprocessing steps to ensure the dataset's quality and prepare it for analysis. This process involved:
 
-Handling missing values: missing values in the dataset was identified and was filled with mean value of the column. 
+d. **Handling missing values**: missing values in the dataset was identified and was filled with mean value of the column. 
 
-Handling duplicates: checked for aduplicated records to avoid redundancy and ensure data integrity but there was no duplicate value.
+e. **Handling duplicates**: checked for aduplicated records to avoid redundancy and ensure data integrity but there was no duplicate value.
 
-Data transformation: performed necessary transformations on the data, such as converting data types, scaling numerical features, encoding categorical variables, and creating derived features.
+f. **Data transformation**: performed necessary transformations on the data, such as converting data types, scaling numerical features, encoding categorical variables, and creating derived features.
 
-## Modeling
+## Model Training
 In this project, multiple classification models are implemented and trained using the preprocessed telecom churn dataset. The models include:
 (Logistic Regression,Random Forest, XGB Classifier,K-Nearest Neighbors, SGD Classifier,'SVC', Naive Bayes, Decision tree,
  
@@ -118,7 +114,8 @@ Please refer to the provided capstone model notebook in the **notebooks**  folde
 ## Evaluation
 The trained models are evaluated using Accuracy, Precision, Recall and AUC_score. These metrics provide insights into the model's performance in predicting customer churn. The evaluation results are as shown below:
 
-![Evaluation](."C:\Users\USER\Pictures\table 1.jpg" "C:\Users\USER\Pictures\Screenshots")
+![table 1](https://github.com/adeleyestella/Customer_churn/assets/132029424/835d355d-6f51-416d-8099-7c65b7d7435a)
+
 
 All the models has accuracy not less than 72%
 
