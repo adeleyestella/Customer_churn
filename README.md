@@ -55,13 +55,28 @@ b. Run the prediction script using the following command:
 c. The model will process the input data and generate Customer Churn predictions. The results will be displayed on the console.
 
 ## Dataset
-The Customer Churn Prediction Model is trained on a dataset containing historical data of vehicles and their corresponding CO2 emissions. The dataset includes the following features:
+The Customer Churn Prediction Model is trained on a dataset containing a collection of features related to telecom customers. The dataset includes the following features:
 
-- Vehicle make
-- Vehicle model
-- Vehicle type (e.g., car, truck, SUV)
-- Fuel type (e.g., petrol, diesel)
-- Engine size (in liters)
+
+- gender
+- SeniorCitizen
+- Partner
+- Dependents
+- tenure
+- PhoneService
+- MultipleLines
+- InternetService
+- OnlineSecurity
+- OnlineBackup
+- DeviceProtection
+- TechSupport
+- StreamingTV
+- StreamingMovies
+- Contract
+- PaperlessBilling
+- PaymentMethod
+- MonthlyCharges
+- TotalCharges
 
 Each data point in the dataset consists of these features along with the churn value. The dataset is split into training and testing sets for model evaluation.
 
